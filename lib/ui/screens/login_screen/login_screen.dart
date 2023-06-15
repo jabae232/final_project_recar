@@ -34,8 +34,6 @@ class _LoginScreenBody extends StatelessWidget {
     final modelSharedPref = SharedPrefModel();
     modelSharedPref.loggedWrite('Y');
   }
-
-
   @override
   Widget build(BuildContext context) {
     void createAccount() {

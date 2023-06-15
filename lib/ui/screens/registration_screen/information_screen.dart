@@ -178,28 +178,6 @@ class _InformationScreenBodyState extends State<_InformationScreenBody> {
               const SizedBox(
                 height: 24,
               ),
-              TextField(
-                focusNode: focusFour,
-                onSubmitted: (value) => FocusScope.of(context).requestFocus(focusFive),
-                decoration: InputDecoration(
-                    errorText: InformationScreenModelProvider.watch(context)
-                        ?.model
-                        .errorDate,
-                    errorMaxLines: 3,
-                    hintText: "${AppLocalizations.of(context)?.dateOfBirth}",
-                    fillColor: AppColors.regWhite,
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 16.0, horizontal: 16.0),
-                    border: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(14.0),
-                      ),
-                    )),
-                onChanged: (value) =>
-                    InformationScreenModelProvider.read(context)
-                        ?.model
-                        .dateOfBirth = value,
-              ),
               const SizedBox(
                 height: 24,
               ),

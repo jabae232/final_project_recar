@@ -24,6 +24,13 @@ class _Svg{
   final String moreVertical = 'assets/images/svg/more_vertical.svg';
   final String postComment = 'assets/images/svg/post_comment.svg';
   final String logo = 'assets/images/svg/logo.svg';
+  final String shareNewsProper = 'assets/images/svg/share_news_proper.svg';
+  final String pencil = 'assets/images/svg/pencil.svg';
+  final String sendMessage = 'assets/images/svg/messages_send.svg';
+  final String classyBackBtn = 'assets/images/svg/classy_back_button.svg';
+  final String subscribe = 'assets/images/svg/subscribe.svg';
+  final String suggestPost = 'assets/images/svg/suggest_post.svg';
+  final String followed = 'assets/images/svg/followed_subscribed.svg';
 }
 
 class _Images{
@@ -35,4 +42,11 @@ class _Images{
   final String testLogo = 'assets/images/bitmap/test_logo.png';
   final String testMiniLogo = 'assets/images/bitmap/test_mini_logo.png';
   final String testEachStory = 'assets/images/bitmap/test_each_story.png';
+  final String porcheClub = 'assets/images/bitmap/porsche_club.png';
+  final String testNews = 'assets/images/bitmap/test_news.png';
+  final String autoclub = 'assets/images/bitmap/autoclub.png';
+  final String bikeclub = 'assets/images/bitmap/bikeclub.png';
+  final String brandclub = 'assets/images/bitmap/brandclub.png';
+  final String news = 'assets/images/bitmap/news.png';
+  final String locator = 'assets/images/bitmap/location_picker.png';
 }

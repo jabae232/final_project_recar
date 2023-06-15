@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "F:\\flutterProjects\\flutter\\final_project_recar\\build\\location\\intermediates\\merged_res\\release\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\69227b42496fc50cf99ee9782184c06a\\transformed\\jetified-play-services-base-16.0.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "F:\\flutterProjects\\flutter\\final_project_recar\\build\\location\\intermediates\\merged_res\\release\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\69227b42496fc50cf99ee9782184c06a\\transformed\\jetified-play-services-base-16.0.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "F:\\flutterProjects\\flutter\\final_project_recar\\build\\location\\intermediates\\merged_res\\release\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\69227b42496fc50cf99ee9782184c06a\\transformed\\jetified-play-services-base-16.0.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "F:\\flutterProjects\\flutter\\final_project_recar\\build\\location\\intermediates\\merged_res\\release\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\69227b42496fc50cf99ee9782184c06a\\transformed\\jetified-play-services-base-16.0.1\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "F:\\flutterProjects\\flutter\\final_project_recar\\build\\location\\intermediates\\merged_res\\release\\drawable-xxhdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\69227b42496fc50cf99ee9782184c06a\\transformed\\jetified-play-services-base-16.0.1\\res\\drawable-xxhdpi-v4\\googleg_standard_color_18.png"
+    },
+    {
+        "merged": "F:\\flutterProjects\\flutter\\final_project_recar\\build\\location\\intermediates\\merged_res\\release\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\User\\.gradle\\caches\\transforms-3\\69227b42496fc50cf99ee9782184c06a\\transformed\\jetified-play-services-base-16.0.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+    }
+]

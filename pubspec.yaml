@@ -13,6 +13,13 @@ environment:
 
 
 dependencies:
+  geocoding: ^2.1.0
+  location: ^4.4.0
+  google_maps_flutter: ^2.2.8
+  provider: ^6.0.5
+  bloc_concurrency: ^0.2.1
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
   image_picker: ^0.8.5
   intl_utils: ^2.8.2
   google_fonts: ^4.0.3

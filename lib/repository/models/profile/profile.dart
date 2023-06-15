@@ -3,9 +3,6 @@ import 'package:car_m/repository/models/profile/followersPage/follower_following
 import 'package:car_m/repository/models/profile/post/post.dart';
 import 'package:car_m/repository/models/profile/user.dart';
 import 'package:json_annotation/json_annotation.dart';
-
-import 'followers.dart';
-
 part 'profile.g.dart';
 @JsonSerializable()
 class ProfileModel {

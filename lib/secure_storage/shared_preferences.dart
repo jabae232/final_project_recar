@@ -45,4 +45,29 @@ class SharedPrefModel {
     prefs = await SharedPreferences.getInstance();
     return prefs?.getString('token') ?? '';
   }
+
+  Future<String> isReply() async{
+    final storage = await _storage;
+    final value = storage.getString('isReply');
+    return value ?? 'false';
+  }
+  Future<String> getComment() async {
+    final storage = await _storage;
+    final value = storage.getString('commentId');
+    return value ?? 'none';
+  }
+  Future<void> setReply(String reply, String id) async{
+    final storage = await _storage;
+    await storage.setString('isReply',reply);
+    await storage.setString('commentId', id);
+  }
+  Future<String> getProfileId() async {
+    final storage = await _storage;
+    final value = storage.getString('profileName');
+    return value ?? 'none';
+  }
+  Future<void> setProfileId(String profileId) async {
+    final storage = await _storage;
+    final value = storage.setString('profileName',profileId);
+  }
 }

@@ -2,6 +2,7 @@ import 'package:car_m/secure_storage/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'domain/data_provider/dependencies_provider.dart';
 import 'l10n/l10n.dart';
 import 'ui/navigation/main_navigation.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -18,7 +19,9 @@ void main() async {
   }if(locale == 'ru') {
     defaultLocale = const Locale('ru', 'RU');
   }
-  runApp(MyApp(locale: defaultLocale,));
+  runApp(DependenciesProvider(builder: (BuildContext context) {
+    return MyApp(locale: defaultLocale,);
+  }));
 }
 class MyApp extends StatefulWidget {
   Locale? locale;

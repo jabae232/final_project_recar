@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:car_m/repository/models/login/login.dart';
 import 'package:car_m/repository/models/profile/followers.dart';
 import 'package:car_m/repository/models/profile/followersPage/follower_followings_list.dart';
@@ -21,7 +20,8 @@ class RecarRepository {
           data: {"username": json.username, "password": json.password});
       if (response.statusCode == 200) {
         final token = TokenModel.fromJson(response.data);
-        SharedPrefModel().saveToken(token.token);
+        await SharedPrefModel().saveToken(token.token);
+        await SharedPrefModel().setProfileId(token.username);
         return true;
       } else {
         return false;
@@ -145,7 +145,7 @@ class RecarRepository {
           .last;
       final token = await SharedPrefModel().getToken();
       var formData = FormData.fromMap({
-        "position": "1",
+        "position": 2,
         "file": await MultipartFile.fromFile(
           file.path,
           filename: fileName,
@@ -194,6 +194,49 @@ class RecarRepository {
     print(response.data);
     } catch (error, stacktrace) {
       throw Exception("Exception occured: $error stackTrace: $stacktrace");
+    }
+  }
+
+  Future<void> uploadAvatar(File? file,) async {
+    if(file != null) {
+      String fileName = file.path
+          .split('/')
+          .last;
+      final token = await SharedPrefModel().getToken();
+      var formData = FormData.fromMap({
+        "file": await MultipartFile.fromFile(
+          file.path,
+          filename: fileName,
+        ),
+      });
+      try {
+        await Dio().post('$api/user/upload/avatar',
+            data: formData,
+            options: Options(headers: {"Authorization": "Bearer $token"}));
+      } catch (error, stacktrace) {
+        throw Exception("Exception occured: $error stackTrace: $stacktrace");
+      }
+    }
+  }
+  Future<void> uploadBackground(File? file,) async {
+    if(file != null) {
+      String fileName = file.path
+          .split('/')
+          .last;
+      final token = await SharedPrefModel().getToken();
+      var formData = FormData.fromMap({
+        "file": await MultipartFile.fromFile(
+          file.path,
+          filename: fileName,
+        ),
+      });
+      try {
+        await Dio().post('$api/user/upload/background',
+            data: formData,
+            options: Options(headers: {"Authorization": "Bearer $token"}));
+      } catch (error, stacktrace) {
+        throw Exception("Exception occured: $error stackTrace: $stacktrace");
+      }
     }
   }
 }

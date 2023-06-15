@@ -1,4 +1,6 @@
+import 'package:car_m/ui/screens/own_profile/widgets/posts/data/bloc/own_post_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../../../../repository/repo/repo.dart';
 import 'dart:io';
@@ -29,7 +31,7 @@ class CreatePostWidgetModel extends ChangeNotifier {
 
   void uploadPost(context) async {
     final followersResponse = await _apiClient.createPost(_image, _content);
+    BlocProvider.of<OwnPostBloc>(context).add(GetPostsEvent());
     Navigator.pop(context);
-
   }
 }

@@ -17,4 +17,8 @@ class AppColors {
   static const buttonNeutral = Color(0xFFe5ebf1);
   static const blueNeutral= Color(0xFFf0f2f5);
   static const iconButtonsNeutral= Color(0xFF848f9c);
+  static const messages = Color(0xFF7C7C7C);
+  static const messageBackgroundFriend = Color(0xFFECECEC);
+  static const messageBackgroundUser = Color(0xFF5790DF);
+  static const backgroundBtn = Color(0xFFEFF5F4);
 }

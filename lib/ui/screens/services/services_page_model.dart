@@ -15,8 +15,8 @@ class ServicesPageModel extends ChangeNotifier{
   Future<void> leave(context) async {
     final model = SharedPrefModel();
     if(await model.loggedRead() == 'Y') {
-      model.loggedWrite('N');
-      model.tokenReset();
+      await model.loggedWrite('N');
+      await model.tokenReset();
       Navigator.of(context).pushReplacementNamed(MainNavigationRouteNames.loginPage);
     }
   }

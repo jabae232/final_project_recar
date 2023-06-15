@@ -1,4 +1,5 @@
 import 'package:car_m/constants/app_assets.dart';
+import 'package:car_m/ui/screens/event_screen/ui/event_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,11 +41,16 @@ class Stories extends StatelessWidget {
                     style: GoogleFonts.poppins(textStyle: AppStyles.s18w700),
                   ),
                 ),
-                SvgPicture.asset(
-                  AppAssets.svg.notificationsOptions,
-                  color: AppColors.mainWhite,
-                  height: 22,
-                  width: 22,
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => EventScreen()));
+                  },
+                  child: SvgPicture.asset(
+                    AppAssets.svg.notificationsOptions,
+                    color: AppColors.mainWhite,
+                    height: 22,
+                    width: 22,
+                  ),
                 ),
                 const SizedBox(
                   width: 15,

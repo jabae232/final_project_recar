@@ -28,28 +28,26 @@ class _NotificationsWidgetBodyState extends State<_NotificationsWidgetBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: AppColors.background,
+        elevation: 0,
+        title: Row(
+          children: [
+            Expanded(
+                child: Text(
+                  "${AppLocalizations.of(context)?.notifications}",
+                  style: GoogleFonts.poppins(textStyle: AppStyles.s24w700),
+                )),
+            SvgPicture.asset(AppAssets.svg.notificationsOptions),
+          ],
+        ),
+      ),
       backgroundColor: AppColors.background,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(
-            height: 60,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 23,vertical: 20),
-            child: Row(
-                children: [
-                  Expanded(
-                      child: Text(
-                        "${AppLocalizations.of(context)?.notifications}",
-                    style: GoogleFonts.poppins(textStyle: AppStyles.s24w700),
-                  )),
-                  SvgPicture.asset(AppAssets.svg.notificationsOptions),
-                ],
-              ),
-          ),
-          const _NewSection(),
+        children: const [
+          _NewSection(),
         ],
       ),
     );

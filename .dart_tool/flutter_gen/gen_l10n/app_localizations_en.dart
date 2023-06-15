@@ -212,7 +212,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get changeAvatar => 'Change profile avatar';
 
   @override
-  String get selectImage => 'Select image';
+  String get selectImageAvatar => 'Select image for avatar';
+
+  @override
+  String get selectImageBackground => 'Select image for background';
 
   @override
   String get imageWasNotSelected => 'Image was not selected';
@@ -222,4 +225,109 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get saves => 'Saves';
+
+  @override
+  String get comments => 'comments';
+
+  @override
+  String get ago => 'ago';
+
+  @override
+  String get justNow => 'just now';
+
+  @override
+  String get daysAgo => 'days ago';
+
+  @override
+  String get minutesAgo => 'minutes ago';
+
+  @override
+  String get comment => 'Comment';
+
+  @override
+  String get messages => 'Messages';
+
+  @override
+  String get recent => 'Recent';
+
+  @override
+  String get subscribe => 'Subscribe';
+
+  @override
+  String get suggestPost => 'Suggest post';
+
+  @override
+  String get news => 'News';
+
+  @override
+  String get mightBeInterested => 'Might be interested';
+
+  @override
+  String get clubCreation => 'Club creation';
+
+  @override
+  String get clubCreationDescription => 'Publish materials in different formats, communicate with readers, create events in different formats, study statistics. Start by choosing a club type';
+
+  @override
+  String get clubMotorcycle => 'Motorcycle club';
+
+  @override
+  String get newsClub => 'News channel';
+
+  @override
+  String get clubVehicle => 'Vehicles club';
+
+  @override
+  String get clubBrand => 'Brand club';
+
+  @override
+  String get clubVehicleDescription => 'These clubs bring together like-minded enthusiasts who appreciate a specific type of vehicle, such as classic cars, sports cars, and off-road vehicles. Members often engage in a variety of activities, including group drives, car shows, track days, events, and social gatherings.';
+
+  @override
+  String get clubMotorcycleDescription => 'Motorcycle clubs are organized groups of motorcycle enthusiasts who come together to share their love for motorcycles and the open road. These clubs provide a sense of community, camaraderie, and belonging among riders who share a common interest in motorcycles';
+
+  @override
+  String get clubBrandDescription => 'Brand clubs are organized communities of individuals who are dedicated enthusiasts and owners of vehicles from a specific automotive brand. These clubs bring together people who share a deep appreciation for a particular brand, such as BMW, Ford, Porsche, or Tesla, among others.';
+
+  @override
+  String get newsClubDescription => 'News and posters, blogs, and content in the environment of vehicles';
+
+  @override
+  String get createClub => 'Create a club';
+
+  @override
+  String get nameOfClub => 'Club name';
+
+  @override
+  String get fillDescription => 'Fill in the description';
+
+  @override
+  String get whyClubInteresting => 'Tell us why your club is so interesting';
+
+  @override
+  String get description => 'Description';
+
+  @override
+  String get addDescription => 'Add description';
+
+  @override
+  String get youAreAmember => 'You are a member of the club';
+
+  @override
+  String get members => 'members';
+
+  @override
+  String get createEvent => 'Create event';
+
+  @override
+  String get followed => 'Followed';
+
+  @override
+  String get attendToEvent => 'Attend to an Event';
+
+  @override
+  String get membersWillAttend => 'members will attend an event';
+
+  @override
+  String get participants => 'Participants';
 }

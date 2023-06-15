@@ -1,16 +1,15 @@
 import 'package:car_m/constants/app_assets.dart';
 import 'package:car_m/constants/app_colors.dart';
-import 'package:car_m/secure_storage/shared_preferences.dart';
-import 'package:car_m/ui/navigation/main_navigation.dart';
 import 'package:car_m/ui/screens/news_page/news_page.dart';
-import 'package:car_m/ui/screens/notifications_page/notifications_page.dart';
-import 'package:car_m/ui/screens/search_page/search_page.dart';
+import 'package:car_m/ui/screens/search_page/ui/search_page.dart';
 import 'package:car_m/ui/screens/services/services_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'messages_screen/ui/messages_screen.dart';
+import 'newsletter_screen/ui/newsletter_screen.dart';
+import 'notifications_page/notifications_page.dart';
 
-import '../../domain/data_provider/box_manager.dart';
-import 'chat/chat_screen.dart';
+
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -35,7 +34,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       backgroundColor: AppColors.bottomAppBarTheme,
       floatingActionButton: FloatingActionButton(
         onPressed: () =>Navigator.push(context, MaterialPageRoute(
-        builder: (context) => ChatScreen())),
+        builder: (context) => MessagesScreen())),
         child: (const Icon(
           Icons.message,
         )),

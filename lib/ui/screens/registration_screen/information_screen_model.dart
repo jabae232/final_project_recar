@@ -6,7 +6,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class InformationScreenModel extends ChangeNotifier {
   var _accountFirstName = '';
   var _accountSecondName = '';
-  var _accountDateOfBirth = '';
+  var _accountDateOfBirth = '11';
   var _accountGender = '';
   var _accountNickname = '';
   String? errorName;
@@ -30,13 +30,6 @@ class InformationScreenModel extends ChangeNotifier {
     _accountSecondName = value;
   }
 
-  set dateOfBirth(String value) {
-    if (errorDate != null && value.trim().isNotEmpty) {
-      errorDate = null;
-      notifyListeners();
-    }
-    _accountDateOfBirth = value;
-  }
 
   set gender(String value) {
     if (errorGender != null && value.trim().isNotEmpty) {

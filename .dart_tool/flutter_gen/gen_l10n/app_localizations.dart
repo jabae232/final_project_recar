@@ -507,11 +507,17 @@ abstract class AppLocalizations {
   /// **'Change profile avatar'**
   String get changeAvatar;
 
-  /// No description provided for @selectImage.
+  /// No description provided for @selectImageAvatar.
   ///
   /// In en, this message translates to:
-  /// **'Select image'**
-  String get selectImage;
+  /// **'Select image for avatar'**
+  String get selectImageAvatar;
+
+  /// No description provided for @selectImageBackground.
+  ///
+  /// In en, this message translates to:
+  /// **'Select image for background'**
+  String get selectImageBackground;
 
   /// No description provided for @imageWasNotSelected.
   ///
@@ -530,6 +536,216 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Saves'**
   String get saves;
+
+  /// No description provided for @comments.
+  ///
+  /// In en, this message translates to:
+  /// **'comments'**
+  String get comments;
+
+  /// No description provided for @ago.
+  ///
+  /// In en, this message translates to:
+  /// **'ago'**
+  String get ago;
+
+  /// No description provided for @justNow.
+  ///
+  /// In en, this message translates to:
+  /// **'just now'**
+  String get justNow;
+
+  /// No description provided for @daysAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'days ago'**
+  String get daysAgo;
+
+  /// No description provided for @minutesAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'minutes ago'**
+  String get minutesAgo;
+
+  /// No description provided for @comment.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment'**
+  String get comment;
+
+  /// No description provided for @messages.
+  ///
+  /// In en, this message translates to:
+  /// **'Messages'**
+  String get messages;
+
+  /// No description provided for @recent.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent'**
+  String get recent;
+
+  /// No description provided for @subscribe.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscribe'**
+  String get subscribe;
+
+  /// No description provided for @suggestPost.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest post'**
+  String get suggestPost;
+
+  /// No description provided for @news.
+  ///
+  /// In en, this message translates to:
+  /// **'News'**
+  String get news;
+
+  /// No description provided for @mightBeInterested.
+  ///
+  /// In en, this message translates to:
+  /// **'Might be interested'**
+  String get mightBeInterested;
+
+  /// No description provided for @clubCreation.
+  ///
+  /// In en, this message translates to:
+  /// **'Club creation'**
+  String get clubCreation;
+
+  /// No description provided for @clubCreationDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Publish materials in different formats, communicate with readers, create events in different formats, study statistics. Start by choosing a club type'**
+  String get clubCreationDescription;
+
+  /// No description provided for @clubMotorcycle.
+  ///
+  /// In en, this message translates to:
+  /// **'Motorcycle club'**
+  String get clubMotorcycle;
+
+  /// No description provided for @newsClub.
+  ///
+  /// In en, this message translates to:
+  /// **'News channel'**
+  String get newsClub;
+
+  /// No description provided for @clubVehicle.
+  ///
+  /// In en, this message translates to:
+  /// **'Vehicles club'**
+  String get clubVehicle;
+
+  /// No description provided for @clubBrand.
+  ///
+  /// In en, this message translates to:
+  /// **'Brand club'**
+  String get clubBrand;
+
+  /// No description provided for @clubVehicleDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'These clubs bring together like-minded enthusiasts who appreciate a specific type of vehicle, such as classic cars, sports cars, and off-road vehicles. Members often engage in a variety of activities, including group drives, car shows, track days, events, and social gatherings.'**
+  String get clubVehicleDescription;
+
+  /// No description provided for @clubMotorcycleDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Motorcycle clubs are organized groups of motorcycle enthusiasts who come together to share their love for motorcycles and the open road. These clubs provide a sense of community, camaraderie, and belonging among riders who share a common interest in motorcycles'**
+  String get clubMotorcycleDescription;
+
+  /// No description provided for @clubBrandDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Brand clubs are organized communities of individuals who are dedicated enthusiasts and owners of vehicles from a specific automotive brand. These clubs bring together people who share a deep appreciation for a particular brand, such as BMW, Ford, Porsche, or Tesla, among others.'**
+  String get clubBrandDescription;
+
+  /// No description provided for @newsClubDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'News and posters, blogs, and content in the environment of vehicles'**
+  String get newsClubDescription;
+
+  /// No description provided for @createClub.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a club'**
+  String get createClub;
+
+  /// No description provided for @nameOfClub.
+  ///
+  /// In en, this message translates to:
+  /// **'Club name'**
+  String get nameOfClub;
+
+  /// No description provided for @fillDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Fill in the description'**
+  String get fillDescription;
+
+  /// No description provided for @whyClubInteresting.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell us why your club is so interesting'**
+  String get whyClubInteresting;
+
+  /// No description provided for @description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get description;
+
+  /// No description provided for @addDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Add description'**
+  String get addDescription;
+
+  /// No description provided for @youAreAmember.
+  ///
+  /// In en, this message translates to:
+  /// **'You are a member of the club'**
+  String get youAreAmember;
+
+  /// No description provided for @members.
+  ///
+  /// In en, this message translates to:
+  /// **'members'**
+  String get members;
+
+  /// No description provided for @createEvent.
+  ///
+  /// In en, this message translates to:
+  /// **'Create event'**
+  String get createEvent;
+
+  /// No description provided for @followed.
+  ///
+  /// In en, this message translates to:
+  /// **'Followed'**
+  String get followed;
+
+  /// No description provided for @attendToEvent.
+  ///
+  /// In en, this message translates to:
+  /// **'Attend to an Event'**
+  String get attendToEvent;
+
+  /// No description provided for @membersWillAttend.
+  ///
+  /// In en, this message translates to:
+  /// **'members will attend an event'**
+  String get membersWillAttend;
+
+  /// No description provided for @participants.
+  ///
+  /// In en, this message translates to:
+  /// **'Participants'**
+  String get participants;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

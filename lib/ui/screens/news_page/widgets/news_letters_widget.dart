@@ -2,97 +2,29 @@ import 'package:car_m/constants/app_assets.dart';
 import 'package:car_m/constants/app_colors.dart';
 import 'package:car_m/constants/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-class _NewsLetterWidgetSample extends StatefulWidget {
-  final Parameters parameters;
-  const _NewsLetterWidgetSample({Key? key, required this.parameters})
-      : super(key: key);
 
+import '../../../../date_formatter/date_formatter.dart';
+import '../../own_profile/widgets/posts/ui/post_widget.dart';
+import '../../profile/widgets/comment_section/ui/comment_section.dart';
+import '../../profile/widgets/post/data/post_profile_bloc.dart';
+import '../data/dto/all_posts_dto.dart';
+class _NewsLetterWidgetSample extends StatefulWidget {
+
+  const _NewsLetterWidgetSample({Key? key,required this.post})
+      : super(key: key);
+  final AllPostsDto post;
   @override
   State<_NewsLetterWidgetSample> createState() => _NewsLetterWidgetSampleState();
 }
 
 class _NewsLetterWidgetSampleState extends State<_NewsLetterWidgetSample> {
-  bool a = false;
-  bool b = false;
-  bool c = false;
-  bool d = false;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16),
-      child: Container(
-        height: 384,
-        width: 386,
-        clipBehavior: Clip.hardEdge,
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.black.withOpacity(0.01)),
-          borderRadius: const BorderRadius.all(Radius.circular(50)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.7),
-              blurRadius: 15,
-              offset: const Offset(0, 7),
-            ),
-          ],
-          image: DecorationImage(
-              image: AssetImage(AppAssets.images.testStories),
-              fit: BoxFit.cover),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 19.2, horizontal: 23.2),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Profile(
-                icon: widget.parameters.image,
-                nickName: widget.parameters.nickName,
-                date: widget.parameters.time,
-              ),
-              const Expanded(
-                child: SizedBox(),
-              ),
-              Column(
-                children: [
-                  InkWell(child: SvgPicture.asset(AppAssets.svg.favouriteNews, color: a? Colors.red : Colors.white,),onTap: (){
-                    a = !a;
-                    setState(() {
-                    });
-                  }),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  InkWell(child: SvgPicture.asset(AppAssets.svg.shareNews),onTap: (){}),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  InkWell(child: SvgPicture.asset(AppAssets.svg.likesNews,color: b? Colors.red.shade900 : Colors.white,),
-                  onTap: (){
-                    b = !b;
-                    setState(() {
-                    });
-                  },),
-                  Text(
-                    widget.parameters.likes,
-                    style: GoogleFonts.poppins(textStyle: AppStyles.s14w400),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  InkWell(child: SvgPicture.asset(AppAssets.svg.commentNews),onTap: (){}),
-                  Text(
-                    widget.parameters.comments,
-                    style: GoogleFonts.poppins(textStyle: AppStyles.s14w400),
-                  )
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+    return _PostListRowWidgets(post: widget.post,);
   }
 }
 
@@ -157,53 +89,11 @@ class Parameters {
 }
 
 class NewsLetterWidget extends StatelessWidget {
-  const NewsLetterWidget({Key? key}) : super(key: key);
+
+  const NewsLetterWidget({Key? key,required this.list}) : super(key: key);
+  final List<AllPostsDto>? list;
   @override
   Widget build(BuildContext context) {
-    final list = [
-      Parameters(
-          image: AppAssets.images.testStories,
-          likes: '2.5k',
-          comments: '103',
-          post: AppAssets.images.testStories,
-          time: '1 ${AppLocalizations.of(context)?.dayAgo}',
-          nickName: 'Mercedes'),
-      Parameters(
-          image: AppAssets.images.testStories,
-          likes: '2.5k',
-          comments: '103',
-          post: AppAssets.images.testStories,
-          time: '1 ${AppLocalizations.of(context)?.dayAgo}',
-          nickName: 'Mercedes'),
-      Parameters(
-          image: AppAssets.images.testStories,
-          likes: '2.5k',
-          comments: '103',
-          post: AppAssets.images.testStories,
-          time: '1 ${AppLocalizations.of(context)?.dayAgo}',
-          nickName: 'Mercedes'),
-      Parameters(
-          image: AppAssets.images.testStories,
-          likes: '2.5k',
-          comments: '103',
-          post: AppAssets.images.testStories,
-          time: '1 ${AppLocalizations.of(context)?.dayAgo}',
-          nickName: 'Mercedes'),
-      Parameters(
-          image: AppAssets.images.testStories,
-          likes: '2.5k',
-          comments: '103',
-          post: AppAssets.images.testStories,
-          time: '1 ${AppLocalizations.of(context)?.dayAgo}',
-          nickName: 'Mercedes'),
-      Parameters(
-          image: AppAssets.images.testStories,
-          likes: '2.5k',
-          comments: '103',
-          post: AppAssets.images.testStories,
-          time: '1 ${AppLocalizations.of(context)?.dayAgo}',
-          nickName: 'Mercedes'),
-    ];
     return MediaQuery.removePadding(
       context: context,
       removeTop: true,
@@ -211,11 +101,193 @@ class NewsLetterWidget extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return _NewsLetterWidgetSample(
-            parameters: list[index],
+            post: list![index],
           );
         },
-        itemCount: list.length,
+        itemCount: list!.length,
         shrinkWrap: true,
+      ),
+    );
+  }
+}
+
+class _PostListRowWidgets extends StatelessWidget {
+  const _PostListRowWidgets({Key? key, required this.post})
+      : super(key: key);
+  final AllPostsDto post;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+      child: InkWell(
+        onTap: () {},
+        child: Container(
+          decoration: BoxDecoration(
+            color: AppColors.mainWhite,
+            border: Border.all(color: Colors.black.withOpacity(0.01)),
+            borderRadius: const BorderRadius.all(Radius.circular(12)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.3),
+                blurRadius: 4,
+                offset: const Offset(0, 7),
+              ),
+            ],
+          ),
+          clipBehavior: Clip.hardEdge,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage:
+                      post.author.avatar == null
+                          ? AssetImage(AppAssets.images.testNews)
+                      as ImageProvider
+                          : NetworkImage(
+                        'http://89.223.100.35:8080${post.author.avatar?.dowloadUri}',
+                      ),
+                      backgroundColor: Colors.transparent,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '@${post.author.username}',
+                          style: AppStyles.s18w700.copyWith(
+                              color: AppColors.mainBlack,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14),
+                        ),
+                        Text(
+                          DateFormatter().getProperDate(
+                              post.createdAt,
+                              context),
+                          style:
+                          AppStyles.s16w400.copyWith(color: Colors.black54),
+                        ),
+                      ],
+                    ),
+                    const Expanded(child: SizedBox()),
+                  ],
+                ),
+                Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Text('${post.description}')),
+                post.postMedia.isNotEmpty ?
+                Image.network(
+                  'http://89.223.100.35:8080${post.postMedia.first.mediaFile}',
+                  loadingBuilder: (BuildContext context, Widget child,
+                      ImageChunkEvent? loadingProgress) {
+                    if (loadingProgress == null) {
+                      return child;
+                    }
+                    return const CircularProgressIndicator();
+                  },
+                ) : SizedBox.shrink(),
+                const SizedBox(height: 10,),
+                Row(
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        BlocProvider.of<PostProfileBloc>(context)..add(SavePostsProfileEvent(id: post.id.toString()));
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: AppColors.blueNeutral,
+                          border:
+                          Border.all(color: Colors.black.withOpacity(0.01)),
+                          borderRadius:
+                          const BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Row(
+                          children: [
+                            Padding(
+                                padding:
+                                const EdgeInsets.symmetric(horizontal: 5),
+                                child: SvgPicture.asset(AppAssets.svg.likesNews,
+                                    color: AppColors.iconButtonsNeutral)),
+                            const Text(
+                              '0',
+                              style: TextStyle(
+                                  color: AppColors.iconButtonsNeutral),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    CommentSectionProfileWidget(id: post.id)));
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: AppColors.blueNeutral,
+                          border:
+                          Border.all(color: Colors.black.withOpacity(0.01)),
+                          borderRadius:
+                          const BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: SvgPicture.asset(
+                          AppAssets.svg.commentNews,
+                          color: AppColors.iconButtonsNeutral,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    InkWell(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: AppColors.blueNeutral,
+                          border:
+                          Border.all(color: Colors.black.withOpacity(0.01)),
+                          borderRadius:
+                          const BorderRadius.all(Radius.circular(20)),
+                        ),
+                        child: Row(
+                          children: [
+                            Padding(
+                                padding:
+                                const EdgeInsets.symmetric(horizontal: 5),
+                                child: SvgPicture.asset(
+                                  AppAssets.svg.shareNews,
+                                  color: AppColors.iconButtonsNeutral,
+                                )),
+                            const Text('0',
+                                style: TextStyle(
+                                    color: AppColors.iconButtonsNeutral)),
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -6,6 +6,9 @@ import 'package:car_m/ui/screens/news_page/widgets/story_widget.dart';
 import 'package:car_m/ui/screens/news_page/widgets/toggle_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import '../../../constants/app_assets.dart';
+import '../notifications_page/notifications_page.dart';
 import 'news_page_model.dart';
 
 class NewsWidget extends StatefulWidget {
@@ -50,7 +53,7 @@ class _NewsWidgetBody extends StatelessWidget {
                       radius: 44,
                       backgroundColor: AppColors.regWhite,
                       child: Icon(
-                        Icons.photo_camera_outlined,
+                        Icons.account_circle_rounded,
                         color: Colors.blueGrey,
                         size: 34,
                       ),
@@ -60,7 +63,9 @@ class _NewsWidgetBody extends StatelessWidget {
             title: Row(
               children: [
                 Expanded(child: Text("${AppLocalizations.of(context)?.home}",style: AppStyles.s21w500.copyWith(color: AppColors.mainBlack),)),
-                const Icon(Icons.add_circle_outline_rounded,color: AppColors.mainBlack,),
+                GestureDetector(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationsWidget())),
+                    child: SvgPicture.asset(AppAssets.svg.notifications)),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Icon(Icons.settings,color: AppColors.mainBlack,)),
@@ -89,7 +94,7 @@ class _NewsWidgetBody extends StatelessWidget {
                       height: 20,
                     ),
                     ToggleButton(),
-                    NewsLetterWidget(),
+                    NewsWidget(),
                   ],
                 ),
               ),

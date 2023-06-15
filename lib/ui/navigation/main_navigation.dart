@@ -1,11 +1,6 @@
 import 'package:car_m/ui/screens/bottom_nav_bar.dart';
-import 'package:car_m/ui/screens/own_profile/own_profile.dart';
 import 'package:car_m/ui/screens/own_profile/widgets/all_posts.dart';
-import 'package:car_m/ui/screens/own_profile/widgets/comment_section/comment_section.dart';
 import 'package:car_m/ui/screens/own_profile/widgets/create_post_widget/create_post_widget.dart';
-import 'package:car_m/ui/screens/own_profile/widgets/followers/followers.dart';
-import 'package:car_m/ui/screens/own_profile/widgets/followings/following.dart';
-import 'package:car_m/ui/screens/profile/profile.dart';
 import 'package:car_m/ui/screens/registration_screen/confirmation_screen.dart';
 import 'package:car_m/ui/screens/registration_screen/information_screen.dart';
 import 'package:car_m/ui/screens/registration_screen/passwords_screen.dart';
@@ -14,6 +9,7 @@ import 'package:flutter/material.dart';
 
 import '../screens/login_screen/login_screen.dart';
 import '../screens/news_page/widgets/check_story_widget/check_story_widget.dart';
+import '../screens/own_profile/ui/own_profile_screen.dart';
 import '../test_widget.dart';
 
 class MainNavigationRouteNames {
@@ -43,7 +39,7 @@ class MainNavigation {
     MainNavigationRouteNames.passswordPage: (context) => const PasswordScreen(),
     /*MainNavigationRouteNames.test: (context) => TestWidget(),*/
     MainNavigationRouteNames.stories: (context) => CheckStoryWidget(),
-    MainNavigationRouteNames.ownProfile: (context) => const OwnProfileWidget(),
+    MainNavigationRouteNames.ownProfile: (context) => const OwnProfileScreen(),
     MainNavigationRouteNames.ownPostWidget: (context) => const OwnPostsWidget(),
   };
 }
@@ -51,7 +47,7 @@ class MainNavigationPush {
   Route<RegistrationPage> registration = MaterialPageRoute(builder: (context) => const RegistrationPage());
   Route<ConfirmationPage> confirmation = MaterialPageRoute(builder: (context) => const ConfirmationPage());
   Route<InformationPage> information = MaterialPageRoute(builder: (context) => const InformationPage());
-  Route<InformationPage> ownProfile = MaterialPageRoute(builder: (context) => const OwnProfileWidget());
+  Route<InformationPage> ownProfile = MaterialPageRoute(builder: (context) => const OwnProfileScreen());
   Route<PasswordScreen> security = MaterialPageRoute(builder: (context) => const PasswordScreen());
   Route<PasswordScreen> stories = MaterialPageRoute(builder: (context) => CheckStoryWidget());
   Route<PasswordScreen> createPostWidget = MaterialPageRoute(builder: (context) => const CreatePostWidgetProfile());

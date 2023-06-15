@@ -212,7 +212,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get changeAvatar => 'Редактировать аватар профиля';
 
   @override
-  String get selectImage => 'Выберите изображение';
+  String get selectImageAvatar => 'Выбрать изображение для аватара';
+
+  @override
+  String get selectImageBackground => 'Выбрать изображение для заднего фона';
 
   @override
   String get imageWasNotSelected => 'Изображение не выбрано';
@@ -222,4 +225,109 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get saves => 'Сохраненные';
+
+  @override
+  String get comments => 'комментариев';
+
+  @override
+  String get ago => 'назад';
+
+  @override
+  String get justNow => 'только что';
+
+  @override
+  String get daysAgo => 'дней назад';
+
+  @override
+  String get minutesAgo => 'минут назад';
+
+  @override
+  String get comment => 'Комментарий';
+
+  @override
+  String get messages => 'Сообщения';
+
+  @override
+  String get recent => 'Недавние';
+
+  @override
+  String get subscribe => 'Подписаться';
+
+  @override
+  String get suggestPost => 'Предложить пост';
+
+  @override
+  String get news => 'Новости';
+
+  @override
+  String get mightBeInterested => 'Может заинтересует';
+
+  @override
+  String get clubCreation => 'Создание клуба';
+
+  @override
+  String get clubCreationDescription => 'Публикуйте материалы разных форматов, общайтесь с читателями, создавайте ивенты разных форматов, изучайте статистику. Начните с выбора типа клуба';
+
+  @override
+  String get clubMotorcycle => 'Клуб мотоциклистов';
+
+  @override
+  String get newsClub => 'Новостной канал';
+
+  @override
+  String get clubVehicle => 'Клуб машинистов';
+
+  @override
+  String get clubBrand => 'Клуб бренда';
+
+  @override
+  String get clubVehicleDescription => 'Эти клубы объединяют единомышленников-энтузиастов, которые ценят определенный тип транспортных средств, таких как классические автомобили, спортивные автомобили и внедорожники. Участники часто участвуют в различных мероприятиях, включая групповые поездки, автомобильные шоу, трек-дни, мероприятия и общественные собрания.';
+
+  @override
+  String get clubMotorcycleDescription => 'Мотоциклетные клубы — это организованные группы любителей мотоциклов, которые собираются вместе, чтобы поделиться своей любовью к мотоциклам и открытым дорогам. Эти клубы обеспечивают чувство общности, товарищества и сопричастности между гонщиками, которые разделяют общий интерес к мотоциклам.';
+
+  @override
+  String get clubBrandDescription => 'Бренд-клубы — это организованные сообщества людей, которые являются преданными энтузиастами и владельцами автомобилей определенной автомобильной марки. Эти клубы объединяют людей, разделяющих глубокую признательность за определенный бренд, например, BMW, Ford, Porsche или Tesla.';
+
+  @override
+  String get newsClubDescription => 'Новости и афиши, блоги и контент в среде машин';
+
+  @override
+  String get createClub => 'Создайте клуб';
+
+  @override
+  String get nameOfClub => 'Название клуба';
+
+  @override
+  String get fillDescription => 'Заполните описание';
+
+  @override
+  String get whyClubInteresting => 'Расскажите чем так интересен ваш клуб';
+
+  @override
+  String get description => 'Описание';
+
+  @override
+  String get addDescription => 'Добавьте описание';
+
+  @override
+  String get youAreAmember => 'Вы состоите в клубе';
+
+  @override
+  String get members => 'участников';
+
+  @override
+  String get createEvent => 'Создать ивент';
+
+  @override
+  String get followed => 'Подписан';
+
+  @override
+  String get attendToEvent => 'Пойду на ивент';
+
+  @override
+  String get membersWillAttend => 'Участников пойдут на ивент';
+
+  @override
+  String get participants => 'Участники';
 }
